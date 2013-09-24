@@ -27,4 +27,26 @@ create table R5(
 	primary key (C)
 	);
 
+insert into R1 values (4,2,0,6);
+insert into R1 values (5,2,0,5);
+insert into R1 values (1,1,3,8);
+insert into R1 values (2,1,3,7);
+insert into R1 values (3,2,3,3);
 
+insert into R2 values (4,1,6);
+insert into R2 values (5,1,5);
+insert into R2 values (1,1,8);
+insert into R2 values (2,1,7);
+insert into R2 values (3,1,3);
+
+insert into R3 values (2,4,6,8);
+insert into R3 values (1,2,3,4);
+
+insert into R4 values (0,0,0);
+insert into R4 values (3,9,27);
+
+insert into R5 values (4,2,0,6,1,6);
+insert into R5 values (5,2,0,5,1,5);
+insert into R5 values (1,1,3,8,1,8);
+insert into R5 values (2,1,3,7,1,7);
+insert into R5 values (3,2,3,3,1,3);
