@@ -1,0 +1,43 @@
+
+{% extends "input_tools/base.html" %}
+{% block content %}
+
+{% comment %}  {% endcomment %}
+
+<table cellspacing="20">
+
+	<tr>
+		<th align="left"> Last Name </th>
+		<th align="left"> First Name </th>
+		<th align="left"> Ref By Last </th>
+		<th align="left"> Ref By First </th>
+		<th align="left"> Referral Year </th>
+		<th align="left"> Update </th>
+		<th align="left"> Returns </th>
+	</tr>
+
+{% for tP, form, fid in clis %}
+
+	<tr> 
+
+		<td> {{ tP.lName }} </td>
+		<td> {{ tP.fName }} </td>
+
+		<form action="" method="post"> {% csrf_token %}
+
+			<td> {{ form.lName }} </td>
+			<td> {{ form.fName }} </td>
+			<td> {{ form.refDate }} </td>
+			<input type="hidden" name="tPayID" value="{{ fid }}"/>
+
+		<td> <input type="submit" name="submit" value="Update"> </td> </form>
+
+		<form action="" method="post"> {% csrf_token %}
+			<input type="hidden" name="clientID" value="{{ fid }}"/>
+		<td> <input type="submit" name="submit" value="View"> </td> </form>
+
+	</tr>
+
+{% endfor %}
+
+{% endblock %}

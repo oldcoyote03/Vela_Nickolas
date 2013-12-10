@@ -1,0 +1,50 @@
+
+
+
+<html>
+
+{% if error_message %}
+	<p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+	<head>
+		<style>
+		body {
+			background-color:#AAAAAA;
+			margin-left: auto;
+			margin-right: auto;
+			width: 48em;
+			margin-top: 0;
+			color:440044;
+		}
+		h1 {
+			padding-left:10px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		</style>
+		<style>.bar{background-image:url("/media/bar-bg.gif");}</style>
+		
+		<title>Vela Tax Pro</title>
+
+	</head>
+	
+	<body>
+
+		<div class="bar">
+		<h1> <a href="{% url 'home' %}">My Tools</a> </h1>
+
+		<table cellspacing="25"> <tr>
+		<th> <h3> <a href="{% url 'expenses' %}">Expenses</a> <h3> </th>
+		<th> <h3> <a href="{% url 'returns' %}">Returns</a> <h3> </th>
+		<th> <h3> <a href="{% url 'clients' %}">Clients</a> <h3> </th>
+		</tr> </table>
+		</div>
+
+		{% block content %}
+		{% endblock %}
+
+	</body>
+
+</html>

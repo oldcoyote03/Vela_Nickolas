@@ -1,0 +1,57 @@
+
+{% extends "input_tools/base.html" %}
+{% block content %}
+
+<ul>
+	<li>
+		<a href="{% url 'returninput' %}">New Return</a> <p>
+	</li>
+
+	<li>
+		
+		{{ label }}
+		<form action="" method="post">
+		{% csrf_token %}
+
+		{{ form.year }}
+
+		<input type="submit" name="submit" value="OK"> </form>
+
+	</li>
+</ul>
+
+<h3> Summary {{ whichYear }} <h3>
+
+<table border="1" cellpadding="15">
+
+	<tr style="background:white">
+		<th align="left"> Last </th>
+		<th align="left"> First </th>
+		<th align="left"> File Date </th>
+		<th align="left"> Price </th>
+		<th align="left"> Fee Collect </th>
+		<th align="left"> Preparer </th>
+		<th align="left"> Notes </th>
+	</tr>
+
+{% for ret, tP in rets %}
+
+	<tr style="background:{% cycle 'transparent' 'white' %}"> 
+		<td> {{ tP.lName }} </td>
+		<td> {{ tP.fName }} </td>
+		<td> {{ ret.fileDate }} </td>
+		<td> ${{ ret.price }} </td>
+		<td> {{ ret.feeCollect }} </td>
+		<td> {{ ret.tPrep }} </td>
+		<td> {{ ret.note }} </td>
+	</tr>
+
+{% endfor %}
+
+</table>
+
+{% comment %}
+
+{% endcomment %}
+
+{% endblock %}

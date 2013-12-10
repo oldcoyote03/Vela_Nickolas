@@ -1,0 +1,16 @@
+
+{% extends "input_tools/base.html" %}
+{% block content %}
+
+<form action="{% url 'input_tools:expenseInput' %}" method="post">
+{% csrf_token %}
+
+	<label for="costID">Cost $</label>
+	<input type="text" name="thisCost" id="costID"/><br>
+
+	<label for="descID">Description </label>
+	<input type="text" name="thisCost" id="descID"/><br>
+
+<input type="submit" name="submit" value="Submit Expense"> </form>
+
+{% endblock %}

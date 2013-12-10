@@ -1,0 +1,28 @@
+
+{% extends "input_tools/base.html" %}
+{% block content %}
+
+<p>
+<a href="{% url 'expenseinput' %}">New Expense</a> <p>
+
+<table cellspacing="20">
+
+	<tr>
+		<th align="left"> Description </th>
+		<th align="left"> Date </th>
+		<th align="left"> Cost </th>
+	</tr>
+
+{% for exp in exps %}
+
+	<tr> 
+		<td> {{ exp.description }} </td>
+		<td> {{ exp.eDate }} </td>
+		<td> ${{ exp.cost }} </td>
+	</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}
