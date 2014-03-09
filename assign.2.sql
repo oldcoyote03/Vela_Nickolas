@@ -1,4 +1,6 @@
-
+/*
+hello there
+*/
 create database relations_1;
 use relations_1;
 
