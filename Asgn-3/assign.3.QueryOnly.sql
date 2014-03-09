@@ -1,3 +1,4 @@
+#hello there 2
 #1.a
 SELECT model, speed, hd FROM pc WHERE price > 1000
 #1.b
