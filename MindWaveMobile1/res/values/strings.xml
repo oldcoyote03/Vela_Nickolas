@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MindPlot</string>
+    <string name="action_settings">Settings</string>
+    <string name="mw_button">Connect</string>
+    <string name="plot_button">Plot</string>
+    <string name="clear_button">Clear</string>
+    <string name="title_activity_history">History</string>
+    
+</resources>

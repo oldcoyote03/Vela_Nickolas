@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+    
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/mwmPlot"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="83"
+        title="@string/title_activity_history"
+        />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="17" >
+
+	    <Button android:id="@+id/mw_button"
+	        android:layout_width="0dp"
+	        android:layout_height="fill_parent"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_toLeftOf="@+id/plot_button"
+	        android:text="@string/mw_button" />
+	
+	    <Button android:id="@+id/plot_button"
+	        android:layout_width="128dp"
+	        android:layout_height="fill_parent"
+	        android:layout_alignParentTop="true"
+	        android:layout_toLeftOf="@+id/clear_button"
+	        android:text="@string/plot_button" />
+	
+	    <Button android:id="@+id/clear_button"
+	        android:layout_width="128dp"
+	        android:layout_height="fill_parent"
+			android:layout_alignParentRight="true"
+	        android:layout_alignParentTop="true"
+	        android:text="@string/clear_button" />
+    
+	</RelativeLayout>
+
+</LinearLayout>
