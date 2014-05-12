@@ -91,7 +91,7 @@ public class MainActivity extends Activity {
     			if (btAdapter.isEnabled()) {
     				mwConnect(v);
     			}
-    		} // onClick	
+    		} // onClick
     	});
 
     	plotButton = (Button) findViewById(R.id.plot_button);

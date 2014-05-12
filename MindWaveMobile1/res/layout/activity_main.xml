@@ -13,33 +13,30 @@
         title="@string/title_activity_history"
         />
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="17" >
+        android:layout_weight="17"
+        android:orientation="horizontal" >
 
 	    <Button android:id="@+id/mw_button"
 	        android:layout_width="0dp"
 	        android:layout_height="fill_parent"
-	        android:layout_alignParentLeft="true"
-	        android:layout_alignParentTop="true"
-	        android:layout_toLeftOf="@+id/plot_button"
+	        android:layout_weight="40"
 	        android:text="@string/mw_button" />
 	
 	    <Button android:id="@+id/plot_button"
-	        android:layout_width="128dp"
+	        android:layout_width="0dp"
 	        android:layout_height="fill_parent"
-	        android:layout_alignParentTop="true"
-	        android:layout_toLeftOf="@+id/clear_button"
+	        android:layout_weight="30"
 	        android:text="@string/plot_button" />
 	
 	    <Button android:id="@+id/clear_button"
-	        android:layout_width="128dp"
+	        android:layout_width="0dp"
 	        android:layout_height="fill_parent"
-			android:layout_alignParentRight="true"
-	        android:layout_alignParentTop="true"
+	        android:layout_weight="30"
 	        android:text="@string/clear_button" />
     
-	</RelativeLayout>
+	</LinearLayout>
 
 </LinearLayout>
